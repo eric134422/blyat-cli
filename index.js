@@ -8,7 +8,6 @@ import chalk from "chalk";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-// Get the directory where this script lives (not where it's called from)
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: join(__dirname, ".env") });
 
@@ -19,14 +18,6 @@ const client = new Anthropic({
 const SYSTEM_PROMPT = "You are a rude and Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
 
 const conversationHistory = [];
-
-// const greet = asyn () => {}
-
-// const var. can't be reassigned.async makes await possible
-
-// new Promise: operation that will be complete in the future
-
-// we cann resolve() when promise is complete
 
 const greet = async () => {
     return new Promise((resolve) => {
