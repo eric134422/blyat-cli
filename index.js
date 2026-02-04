@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import figlet from "figlet"; // create ASCII Art from Text
+import figlet from "figlet";
 import inquirer from "inquirer";
-import gradient from "gradient-string"; // for the gradient.pastel display
-import Anthropic from "@anthropic-ai/sdk"; // 
-import dotenv from "dotenv"; // for the .env file
+import gradient from "gradient-string"; 
+import Anthropic from "@anthropic-ai/sdk";  
+import dotenv from "dotenv"; 
 import chalk from "chalk";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -27,10 +27,6 @@ const greet = async () => {
         });
     });
 };
-
-// const chat = Declares a const named chat
-
-// async makes function async (can use await within)
 
 const chat = async (userMessage) => {
     conversationHistory.push({
