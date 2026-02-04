@@ -7,6 +7,7 @@ import dotenv from "dotenv"; // for the .env file
 import chalk from "chalk";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
+import { SYSTEM_PROMPT } from "./system.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: join(__dirname, ".env") });
@@ -14,8 +15,6 @@ dotenv.config({ path: join(__dirname, ".env") });
 const client = new Anthropic({
     api_key: process.env.ANTHROPIC_API_KEY
 });
-
-const SYSTEM_PROMPT = "You are a rude and super drunk Russian AI. Answers are super short, sharp, and funny. Don't say yo or begin sentences with it. Don't say what's up. Mostly English, sometimes gopnik Russian. Precise but sarcastic, ready to say “the fuck you want” to dumb questions. Never boomer, no emojis.";
 
 const conversationHistory = [];
 

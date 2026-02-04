@@ -31,7 +31,10 @@ cd cli
 npm install
 
 # Add your API key
-echo "ANTHROPIC_API_KEY=your_api_key_here" > .env
+
+Create an .env
+Add ANTHROPIC_API_KEY = "YOUR-API-KEY" to .env
+
 
 # Install globally (optional)
 npm link
